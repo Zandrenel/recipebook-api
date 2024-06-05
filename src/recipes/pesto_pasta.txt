@@ -1,0 +1,8 @@
+n:Chicken Stir Fry
+a:Rose Sockler
+q:1/4;m:cup;i:flour
+q:1;m:lb;i:chicken stock
+q:m: i:
+q: m: i:
+s:
+c:

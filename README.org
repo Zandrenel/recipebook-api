@@ -1,0 +1,24 @@
+* Mealplan API
+
+
+** Running It
+- Make sure you're in the src folder in the cli
+- run scryer-prolog server.pl
+  - this will consult the server.pl file
+- once in the file run ?- server(3030).
+  - this will run the server on port 3030, any port can be used    
+
+** Folder Structure
+** src/
+- this is where the toplevel is of the code
+- the main execute is here as well as other code that may need to be toplevel
+
+** src/modules
+- this is where each pl file for each base route should be
+- example being all mealplan routes should be in the mealplan file and will start with /mealplan/X
+
+** Known Issues/To Check
+- [ ] Get other types of requests working except just get requetss
+- [ ] Make sure the pio library fully works and so does reading from file
+- the `/mealplans/basic` route is broken right now but can be fixed
+
