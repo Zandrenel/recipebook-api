@@ -15,6 +15,11 @@ server(Port) :-
 		    % every predicate is arity 2 minimum to take the request and response data
 		    get(/, root_handler),
 		    get(mealplan/basic, basic_handler),
+		    % 2 cases of post request with a dynamic parameter
+		    post(mealplan/basic/Basic, basic_handler_post(Basic)),
+		    post(mealplan/Basic/basic, basic_handler_post(Basic)),
+		    % basic post request that only takes  json body
+		    post(mealplan/basic, basic_handler_post),
 		    get(mealplan/low_calorie, low_calorie_handler),
 		    get(recipe/recipe, recipe_handler),
 		    post(recipe/recipe, recipe_handler),
