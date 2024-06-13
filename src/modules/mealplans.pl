@@ -3,8 +3,7 @@
 % the list of predicates afterwards are whats exported, it won't export a predicate that isn't declared
 :- module(mealplans, [
 	      basic_handler/2,
-	      low_calorie_handler/2,
-	      get_recipe_from_file/1
+	      low_calorie_handler/2
 	  ]).
 % libraries need to be declared after the module declaration for it to be used.
 :- use_module(library(http/http_server)).

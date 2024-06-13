@@ -16,7 +16,9 @@ server(Port) :-
 		    get(/, root_handler),
 		    get(mealplan/basic, basic_handler),
 		    get(mealplan/low_calorie, low_calorie_handler),
-		    get(recipe/recipe, recipe_handler),				    		    get(_,error_handler)		   
+		    get(recipe/recipe, recipe_handler),
+		    post(recipe/recipe, recipe_handler),
+		    get(_,error_handler)		   
 		]).
 
 % base root handler for testing and demo purposes
