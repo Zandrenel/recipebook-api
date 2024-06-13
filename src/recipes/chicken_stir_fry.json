@@ -1,0 +1,67 @@
+{
+    "name":"Chicken Stir Fry",
+    "author":"Rose Sockler",
+    "ingredients":[
+	{
+	    "quantity":"1/4",
+	    "measurement":"cup",
+	    "name":"flour"
+	},
+	{
+	    "quantity":"1",
+	    "measurement":"cup",
+	    "name":"Chicken stock"
+	},
+	{
+	    "quantity":"1/4",
+	    "measurement":"cup",
+	    "name":"honey"
+	},
+	{
+	    "quantity":"1/4",
+	    "measurement":"cup",
+	    "name":"low salt soy sauce"
+	},
+	{
+	    "quantity":"1",
+	    "measurement":"tsp",
+	    "name":"ground ginger"
+	},
+	{
+	    "quantity":"1/2",
+	    "measurement":"tsp",
+	    "name":"garlic powder"
+	},
+	{
+	    "quantity":"1/4",
+	    "measurement":"cup",
+	    "name":"Duck Sauce"
+	},
+	{
+	    "quantity":"1/2",
+	    "measurement":"cup",
+	    "name":"broccoli"
+	},
+	{
+	    "quantity":"1/2",
+	    "measurement":"cup",
+	    "name":"carrots"
+	},
+	{
+	    "quantity":"1/2",
+	    "measurement":"cup",
+	    "name":"zuchini"
+	},	{
+	    "quantity":"1/2",
+	    "measurement":"cup",
+	    "name":"onion"
+	},	{
+	    "quantity":"1/2",
+	    "measurement":"cup",
+	    "name":"celery"
+	},	{
+	    "quantity":"5",
+	    "measurement":"cloves",
+	    "name":"minced garlic"
+	}]
+}

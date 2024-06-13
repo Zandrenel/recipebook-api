@@ -3,6 +3,7 @@
 
 % self made module declarations
 :- use_module(modules/mealplans).
+:- use_module(modules/recipes).
 
 % this is where the program runs, querying the server predicate
 % will cause the program to start listening on the designated port
@@ -15,7 +16,7 @@ server(Port) :-
 		    get(/, root_handler),
 		    get(mealplan/basic, basic_handler),
 		    get(mealplan/low_calorie, low_calorie_handler),
-		    get(_,error_handler)		   
+		    get(recipe/recipe, recipe_handler),				    		    get(_,error_handler)		   
 		]).
 
 % base root handler for testing and demo purposes

@@ -10,26 +10,13 @@
 :- use_module(library(http/http_server)).
 :- use_module(library(dcgs)).
 :- use_module(library(pio)).
+:- use_module(library(charsio)).
 
 % here are the predicates in the module that are exported
 basic_handler(_Request, Response):-
     http_status_code(Response, 200),
-    get_recipe_from_file(Recipe),
-    http_body(Response, text(Recipe)).
+    http_body(Response, text("Hello Basic!")).
 
 low_calorie_handler(_Request, Response):-
     http_status_code(Response, 200),
     http_body(Response, text("Hello low!")).
-
-
-get_recipe_from_file(Recipe):-
-    open('recipes/pesto_pasta.txt',read,S),
-    phrase_from_stream(author(Author),S),
-    Recipe = recipe(Author).
-
-
-author(Author) --> "a:", seq(Author), ['\n'].
-
-% ?- get_recipe_from_file(Recipe).
-%@ caught: error(existence_error(procedure,phrase_from_stream/2),phrase_from_stream/2)
-
