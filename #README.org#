@@ -40,3 +40,4 @@
 - not all information needs to be hardcoded
   - example:
     - pescatarian can be a predicate, it checks the ingredients in a recipe, and declares a recipe as so if no ingredient is meat is meat besides fish, just needs a knowledge base of ingredients and naming if they're fish, vegtables, meat, other
+      
