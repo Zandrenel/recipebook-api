@@ -1,11 +1,13 @@
 :- module(recipes,
 	  [
-	      recipe_handler/2
+	      recipe_handler/2,
+	      recipe_handler_getAll/2
 	  ]).	      
 
 % Library imports
 :- use_module(library(http/http_server)).
 :- use_module(library(charsio)).
+:- use_module(recipe_reader).
 
 % module imports of modules in the same directory
 :- use_module(recipe_parser).
@@ -22,6 +24,23 @@ recipe_handler(_Request, Response):-
     % and hence returned through the get request as a text return.
     write_term_to_chars(Recipe0,[],Recipe),
     http_body(Response, text(Recipe)).
+
+
+
+recipe_handler_getAll(_Request, Response):-
+    write("s"),nl,
+    http_status_code(Response, 200),
+    http_headers(Response, ["Access-Control-Allow-Origin"-"*",
+			    "Content-Type"-"application/json",
+			   "Accept"-"application/json, text/plain, */*"
+			   ]),
+    write("s1"),nl,
+    getAll_db(Recipes),
+    %% recipe(local_file, 'chicken stir fry', File),
+    %% get_recipe_from_file(File, Recipe0),
+    %% write_term_to_chars(Recipe0,[],Recipe),
+    http_body(Response, text(Recipes)).
+
 
 % file links vs aliases for each recipe, can by dynamically generated with the assert and retract predicates too
 recipe(local_file, 'chicken stir fry', "./recipes/chicken_stir_fry.json").
