@@ -23,6 +23,7 @@ server(Port) :-
 		    get(mealplan/low_calorie, low_calorie_handler),
 		    get(recipe/recipe, recipe_handler),
 		    post(recipe/recipe, recipe_handler),
+		    
 		    get(_,error_handler)		   
 		]).
 
